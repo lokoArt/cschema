@@ -85,11 +85,19 @@ WSGI_APPLICATION = 'cschema.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'cschema',
+        'USER': 'root',
+        'PASSWORD': 'cschema5678',
+        'HOST': 'schema.cnlqqaxoryql.ap-southeast-1.rds.amazonaws.com',
+        'PORT': '3306',
+        'ATOMIC_REQUESTS': True,
+        'OPTIONS': {
+            'sql_mode': 'STRICT_TRANS_TABLES',
+            'charset': 'utf8mb4'
+        }
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
