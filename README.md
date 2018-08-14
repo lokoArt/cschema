@@ -1,6 +1,6 @@
 # Custom Schema
 
-> Simple REST API project
+REST API For insurances
 
 ## Build Setup
 
